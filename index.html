@@ -7,16 +7,25 @@
     <title>Magic Quiz!</title>
   </head>
   <body>
-    <header>
-      <h1>How much do you know about Magic The Gathering?</h1>
-    </header>
-    <h5>
-      <span id="displayTimer"></span>
-    </h5>
-    <div>
-      <p id="question">How much?</p>
+    <div class="container">
+      <div class="quiz-box">
+        <div id="quiz">
+          <h1>Magic quiz app, how well do you know magic?</h1>
+          <div class="quiz-header">
+            <p id="progress">Question x of y</p>
+            <p id="count-down"></p>
+          </div>
+          <p id="question"></p>
+
+          <div class="buttons">
+            <button class="btn" id="btn0">A. <span id="choice0"></span></button>
+            <button class="btn" id="btn0">B. <span id="choice1"></span></button>
+            <button class="btn" id="btn0">C. <span id="choice2"></span></button>
+            <button class="btn" id="btn0">D. <span id="choice3"></span></button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button id="startBtn">Start Quiz</button>
     <script src="./Assets/js/script.js"></script>
   </body>
 </html>
