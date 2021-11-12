@@ -227,14 +227,14 @@ document.getElementById("startBtn").onclick = function quizStart() {
 // document.getElementById("startBtn").addEventListener("click", function () {
 //   var timeleft = 15;
 
-var countdown = setInterval(function function1() {
-  document.getElementById("countdown").innerHTML =
-    timeleft + " " + "seconds remaining";
+// var countdown = setInterval(function function1() {
+//   document.getElementById("countdown").innerHTML =
+//     timeleft + " " + "seconds remaining";
 
-  timeleft -= 1;
-  if (timeleft <= 0) {
-    clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Time is up!";
-  }
-}, 1000);
-console.log(countdown);
+//   timeleft -= 1;
+//   if (timeleft <= 0) {
+//     clearInterval(downloadTimer);
+//     document.getElementById("countdown").innerHTML = "Time is up!";
+//   }
+// }, 1000);
+// console.log(countdown);
