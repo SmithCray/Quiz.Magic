@@ -7,24 +7,14 @@
     <title>Magic Quiz!</title>
   </head>
   <body>
-    <div class="container">
-      <div class="quiz-box">
-        <div id="quiz">
-          <h1>Magic quiz app, how well do you know magic?</h1>
-          <div class="quiz-header">
-            <p id="progress">Question x of y</p>
-            <p id="count-down"></p>
-          </div>
-          <p id="question"></p>
+    <h1>How much do you know about Magic?</h1>
+    <p id="currentQuestion">Questions here</p>
+    <p id="quizTimer">Timeleft: <span id="timerDisplay"> </span> countdown</p>
 
-          <div class="buttons">
-            <button class="btn" id="btn0">A. <span id="choice0"></span></button>
-            <button class="btn" id="btn0">B. <span id="choice1"></span></button>
-            <button class="btn" id="btn0">C. <span id="choice2"></span></button>
-            <button class="btn" id="btn0">D. <span id="choice3"></span></button>
-          </div>
-        </div>
-      </div>
+    <button id="startBtn">Start The Quiz!</button>
+    <button id="nextBtn">Next Question.</button>
+    <div>
+      <ul id="scoreBoard"></ul>
     </div>
     <script src="./Assets/js/script.js"></script>
   </body>
