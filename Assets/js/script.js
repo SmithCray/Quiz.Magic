@@ -2,8 +2,7 @@ var currentQuestion = "#currentQuestion";
 var quizTimer = "#quizTimer";
 var startBtn = "#startBtn";
 var nextBtn = "#nextBtn";
-
-var questionCounter = 0;
+var questionIndex = 0;
 
 var myQuestions = [
   {
@@ -24,9 +23,10 @@ var myQuestions = [
 ];
 console.log(myQuestions);
 
-document.getElementById("startBtn").onclick = function quizStart(startQuiz) {
+document.getElementById("startBtn").onclick = function quizStart() {
   alert("You have started the quiz!");
 };
+
 // startQuiz = () => {
 // questionCounter = 0
 // sore =0
@@ -227,15 +227,14 @@ document.getElementById("startBtn").onclick = function quizStart(startQuiz) {
 // document.getElementById("startBtn").addEventListener("click", function () {
 //   var timeleft = 15;
 
-//   var downloadTimer = setInterval(function function1() {
-//     document.getElementById("countdown").innerHTML =
-//       timeleft + " " + "seconds remaining";
+var countdown = setInterval(function function1() {
+  document.getElementById("countdown").innerHTML =
+    timeleft + " " + "seconds remaining";
 
-//     timeleft -= 1;
-//     if (timeleft <= 0) {
-//       clearInterval(downloadTimer);
-//       document.getElementById("countdown").innerHTML = "Time is up!";
-//     }
-//   }, 1000);
-// });
-// console.log(countdown);
+  timeleft -= 1;
+  if (timeleft <= 0) {
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Time is up!";
+  }
+}, 1000);
+console.log(countdown);
