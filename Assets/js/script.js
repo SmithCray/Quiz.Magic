@@ -1,8 +1,9 @@
-var currentQuestion = "#currentQuestion";
-var quizTimer = "#quizTimer";
-var startBtn = "#startBtn";
-var nextBtn = "#nextBtn";
+var currentQuestion = document.querySelector("#currentQuestion");
+var quizTimer = document.querySelector("#timerDisplay");
+var startBtn = document.querySelector("#startBtn");
+var nextBtn = document.querySelector("#nextBtn");
 var questionIndex = 0;
+var timer = 30;
 
 var myQuestions = [
   {
@@ -23,8 +24,37 @@ var myQuestions = [
 ];
 console.log(myQuestions);
 
+function setTimer() {
+  var substractTime = setInterval(function () {
+    //console.log("Hey");
+    quizTimer.innerHTML = timer;
+    timer--;
+  }, 1000);
+}
+
+function hideStart() {
+  document.getElementById("startBtn").style.display = "none";
+}
+
+function showQuestion() {
+  currentQuestion.innerHTML = myQuestions[questionIndex].questions;
+  for (var i = 0; i < myQuestions[questionIndex].choices.length; i++) {
+    //create a button for each choice
+    //display the value of the choice onto the button you just created
+    //add/append the button to the choices div
+  }
+  //for(where you want the loop to start, where you want the loop to end; what's the next index that you want to loop through)
+}
+
+//Later on, when user select a choice, need to increase questionIndex by 1 questionIndex++
+//call showQuestion again, to display the next question
+//because now the questionIndex = 1;
+
 document.getElementById("startBtn").onclick = function quizStart() {
-  alert("You have started the quiz!");
+  // alert("You have started the quiz!");
+  setTimer();
+  showQuestion();
+  hideStart();
 };
 
 // startQuiz = () => {
@@ -238,3 +268,33 @@ document.getElementById("startBtn").onclick = function quizStart() {
 //   }
 // }, 1000);
 // console.log(countdown);
+
+// var x = {
+//   names: ["Cray", "Trinh", "Smith"],
+//   drinks: [
+//     {
+//       morning: "coffee",
+//       afternoon: "water",
+//       night: "shots",
+//     },
+//     {
+//       morning: "tea",
+//       afternoon: "juice",
+//       night: "water",
+//     },
+//   ],
+//   daily: {
+//     hobbies: {
+//       morning: "reading",
+//       afternoon: "sqimming",
+//       night: "coding",
+//     },
+//   },
+// };
+
+// x.drinks[0]; // {morning:"coffee"}
+// x.drinks[0].morning; //"coffee"
+// x.drinks[0].night; //"shots"
+// x.drinks[1].afternoon; //"juice"
+// x.daily.hobbies.afternoon;
+// x.names[1];
