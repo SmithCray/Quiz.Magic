@@ -1,5 +1,11 @@
 # Magic Quiz.
 
+## Discription:
+
+Here at Magic Quiz Online we created a simple and fun online test about Magic the Gathering where users can test there knowledge against the clock,
+careful wrong answers may just cost you! Too fast for the clock? Try competing against your friends locally and get your name on the leader board!
+We strive to provide a simple user interface and fun content any fan can enjoy. Come play today!
+
 ## Show your knowledge!
 
 Come test your knowledge at [Magic Quiz Online](https://smithcray.github.io/Quiz.Magic/)!
